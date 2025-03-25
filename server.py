@@ -8,7 +8,6 @@ port=1998
 # port=int(os.getenv("PORT",1998))
 server.bind((ip,port))
 server.listen()
-print("server is listening for connection")
 cors_headers=(
         "HTTP/1.1 200 OK\r\n"
         "Access-Control-Allow-Origin:*\r\n"
@@ -17,7 +16,6 @@ cors_headers=(
         "Content-Type:application/json\r\n"
         "\r\n"
         )
-print('i am here now 1')
 preflight_headers=(
        "HTTP/1.1 204 No Content\r\n"                              
        "Access-Control-Allow-Origin:*\r\n"
@@ -27,10 +25,9 @@ preflight_headers=(
        "\r\n"
        )
 
-print('i am here now 2')
 def handle_client():
-    print('i am here now 3')
     while True:
+        print("server is listening for connection")
         conn,addr=server.accept()
         print('i am here now 4')
         data=conn.recv(1024).decode()
