@@ -63,7 +63,8 @@ import threading
 
 server = socket.socket()
 ip = "0.0.0.0"
-port = int(os.getenv("PORT", 1998))
+# port = int(os.getenv("PORT", 1998))
+port=443
 server.bind((ip, port))
 server.listen()
 print("Server is listening for connections")
