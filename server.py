@@ -3,7 +3,7 @@ import json
 
 server=socket.socket()
 ip=""
-port=443
+port=1998
 server.bind((ip,port))
 server.listen()
 print("server is listening for connection")
