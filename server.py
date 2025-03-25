@@ -5,7 +5,7 @@ import os
 server=socket.socket()
 ip="0.0.0.0"
 # port=1998
-port=int(os.getenv("PORT",1998))
+port=int(os.getenv("PORT",8080))
 server.bind((ip,port))
 print(port)
 server.listen()
