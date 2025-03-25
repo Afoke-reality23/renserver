@@ -3,7 +3,7 @@ import json
 import os
 
 server=socket.socket()
-ip=" "
+ip=""
 # port=1998
 port=int(os.getenv("PORT",8080))
 server.bind((ip,port))
