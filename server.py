@@ -4,8 +4,8 @@ import os
 
 server=socket.socket()
 ip="0.0.0.0"
-port=1998
-# port=int(os.getenv("PORT",1998))
+# port=1998
+port=int(os.getenv("PORT",1998))
 server.bind((ip,port))
 server.listen()
 cors_headers=(
