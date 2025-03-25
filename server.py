@@ -4,7 +4,8 @@ import os
 
 server=socket.socket()
 ip="0.0.0.0"
-port=int(os.getenv("PORT",1998))
+port=1998
+# port=int(os.getenv("PORT",1998))
 server.bind((ip,port))
 server.listen()
 print("server is listening for connection")
@@ -27,7 +28,6 @@ preflight_headers=(
        )
 
 print('i am here now 2')
-
 def handle_client():
     print('i am here now 3')
     while True:
