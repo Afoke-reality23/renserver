@@ -29,15 +29,12 @@ def handle_client():
     while True:
         print("server is listening for connection")
         conn,addr=server.accept()
-        print('i am here now 4')
         data=conn.recv(1024).decode()
-        print('i am here now 5')
-        # print(data)
         if data.startswith("OPTIONS"):
             conn.send(preflight_headers.encode("utf-8"))
             conn.close()
             continue
-        print('i am here now ')
+        print(data)
         if "\r\n\r\n" in data:
             print('true')
             header,body=data.split("\r\n\r\n",1)
