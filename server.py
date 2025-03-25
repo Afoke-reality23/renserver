@@ -109,12 +109,10 @@ def handle_client(conn, addr):
         rsp = json.dumps(msg)
         full_msg = cors_headers + rsp
         conn.send(full_msg.encode("utf-8"))
+        conn.close()
 
     except Exception as e:
         print(f"Error handling client: {e}")
-
-    finally:
-        conn.close()
 
 
 while True:
