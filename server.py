@@ -1,9 +1,10 @@
 import socket
 import json
+import os
 
 server=socket.socket()
 ip=""
-port=1998
+port=int(os.getenv("PORT",1998))
 server.bind((ip,port))
 server.listen()
 print("server is listening for connection")
