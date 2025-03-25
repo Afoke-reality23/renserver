@@ -16,6 +16,7 @@ cors_headers=(
         "Content-Type:application/json\r\n"
         "\r\n"
         )
+print('i am here now 1')
 preflight_headers=(
        "HTTP/1.1 204 No Content\r\n"                              
        "Access-Control-Allow-Origin:*\r\n"
@@ -25,9 +26,10 @@ preflight_headers=(
        "\r\n"
        )
 
-                   
+print('i am here now 2')
 
 def handle_client():
+    print('i am here now 3')
     while True:
         conn,addr=server.accept()
         data=conn.recv(1024).decode()
