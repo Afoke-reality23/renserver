@@ -90,6 +90,7 @@ preflight_headers = (
 
 def handle_client(conn, addr):
     try:
+        print(data)
         data = conn.recv(1024).decode()
         if not data:
             conn.close()
