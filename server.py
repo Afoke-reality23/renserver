@@ -32,7 +32,9 @@ def handle_client():
     print('i am here now 3')
     while True:
         conn,addr=server.accept()
+        print('i am here now 4')
         data=conn.recv(1024).decode()
+        print('i am here now 5')
         # print(data)
         if data.startswith("OPTIONS"):
             conn.send(preflight_headers.encode("utf-8"))
